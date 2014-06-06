@@ -320,7 +320,7 @@ class Ghost {
 			while( $posts->have_posts() ) {
 				global $post;
 				$posts->the_post();
-
+                $post->post_markdown = new HTML_To_Markdown($post->post_content);
 
 				$tags = get_the_tags();
 				if(!empty($tags)){
@@ -341,7 +341,7 @@ class Ghost {
 					'id'			=> intval( $post->ID ),
 					'title'			=> (empty($post->post_title))?'(no title)':$post->post_title,
 					'slug'			=> (empty($post->post_name))?'temp-slug-'.$slug_number:$post->post_name,
-					'markdown'		=> $post->post_content,
+					'markdown'		=> $post->post_markdown->output(),
 					'html'			=> $post->post_content,
 					"image"			=> null,
             		"featured"		=> 0,
