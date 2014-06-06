@@ -1,9 +1,9 @@
 === Ghost ===
-Contributors: JohnONolan, ErisDS, javorszky
+Contributors: JohnONolan, ErisDS, javorszky, yauh
 Donate link: http://ghost.org/
 Tags: export, ghost
 Requires at least: 3.5
-Tested up to: 3.8.1
+Tested up to: 3.9.1
 Stable tag: 0.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -27,6 +27,9 @@ The Ghost WordPress plugin allows you to export your WordPress data in a format 
 Install it, then go to Tools -> Export to Ghost.
 
 == Changelog ==
+
+= 0.4.4 =
+* Added [HTML_To_Markdown](https://github.com/nickcernis/html-to-markdown) library to convert HTML post content to Markdown
 
 = 0.4.3 =
 * Added support for `private` and `pending` WordPress post statuses (which were unhandled, and thus broke import). Ref: [WP Query: Status Parameters](http://codex.wordpress.org/Class_Reference/WP_Query#Status_Parameters)
